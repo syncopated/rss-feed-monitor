@@ -107,10 +107,6 @@
     <h1>The World This Hour</h1>
     <p class="subtitle">CBC Hourly News Archive</p>
     <p id="status">Loading...</p>
-    <div style="margin-top: 0.75rem;">
-      <button class="test-btn" id="test-feed-btn">Test Feed ⚡</button>
-      <div id="feed-test-result"></div>
-    </div>
   </header>
   <main id="entries"></main>
   <script>
@@ -201,35 +197,6 @@
       return str.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/'/g, "&#39;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     }
 
-    const FEED_URL = "https://www.cbc.ca/podcasting/includes/hourlynews.xml";
-
-    async function testFeed() {
-      const btn = document.getElementById("test-feed-btn");
-      const container = document.getElementById("feed-test-result");
-      btn.classList.add("testing");
-      container.innerHTML = `<div class="test-result" style="color: var(--muted)">\u23F3 Fetching feed...</div>`;
-
-      const start = performance.now();
-      try {
-        const res = await fetch(FEED_URL);
-        const elapsed = Math.round(performance.now() - start);
-        if (res.ok) {
-          const xml = await res.text();
-          const pubMatch = xml.match(/<pubDate>([^<]+)<\/pubDate>/);
-          const guidMatch = xml.match(/<guid[^>]*>([^<]+)<\/guid>/);
-          const pubDate = pubMatch ? pubMatch[1] : "unknown";
-          const guid = guidMatch ? guidMatch[1].slice(0, 24) + "..." : "unknown";
-          container.innerHTML = `<div class="test-result success">\u2705 OK (${res.status}) in ${elapsed}ms &mdash; latest: ${escapeHtml(pubDate)}, guid: ${escapeHtml(guid)}</div>`;
-        } else {
-          container.innerHTML = `<div class="test-result fail">\u274C HTTP ${res.status} ${escapeHtml(res.statusText)} (${elapsed}ms)</div>`;
-        }
-      } catch (err) {
-        const elapsed = Math.round(performance.now() - start);
-        container.innerHTML = `<div class="test-result fail">\u274C Failed (${elapsed}ms) &mdash; ${escapeHtml(err.message)}</div>`;
-      }
-      btn.classList.remove("testing");
-    }
-
     async function testAudioUrl(btn) {
       const url = btn.dataset.url;
       const container = btn.closest("div").nextElementSibling;
@@ -256,10 +223,8 @@
       btn.classList.remove("testing");
     }
 
-    document.getElementById("test-feed-btn").addEventListener("click", testFeed);
-
     document.addEventListener("click", (e) => {
-      if (e.target.classList.contains("test-btn") && e.target.id !== "test-feed-btn") {
+      if (e.target.classList.contains("test-btn")) {
         testAudioUrl(e.target);
       }
     });
