@@ -1,0 +1,17 @@
+{
+  "name": "rss-feed-monitor",
+  "version": "1.0.0",
+  "description": "Monitor and archive CBC The World This Hour RSS feed",
+  "type": "module",
+  "scripts": {
+    "fetch": "tsx src/fetch.ts"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.5.11"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  }
+}

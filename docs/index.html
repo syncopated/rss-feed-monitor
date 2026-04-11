@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The World This Hour - Archive</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1a1a1a;
+      --muted: #666666;
+      --border: #e0e0e0;
+      --card-bg: #f8f8f8;
+      --accent: #c41e3a;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1a1a1a;
+        --fg: #e8e8e8;
+        --muted: #999999;
+        --border: #333333;
+        --card-bg: #242424;
+        --accent: #e85d75;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      line-height: 1.5;
+    }
+    header { margin-bottom: 2rem; }
+    h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+    .subtitle { color: var(--muted); font-size: 0.9rem; }
+    #status { color: var(--muted); font-size: 0.8rem; margin-top: 0.5rem; }
+    .entry {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background: var(--card-bg);
+    }
+    .entry-time {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    .entry-desc {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+    .entry-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+    .entry-meta span { margin-right: 1rem; }
+    audio {
+      width: 100%;
+      height: 40px;
+      margin-top: 0.25rem;
+    }
+    .download-link {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .download-link:hover { text-decoration: underline; }
+    .error { color: var(--accent); padding: 2rem 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The World This Hour</h1>
+    <p class="subtitle">CBC Hourly News Archive</p>
+    <p id="status">Loading...</p>
+  </header>
+  <main id="entries"></main>
+  <script>
+    async function load() {
+      const status = document.getElementById("status");
+      const container = document.getElementById("entries");
+
+      try {
+        const res = await fetch("entries.json");
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+
+        const entries = data.entries.slice().sort(
+          (a, b) => new Date(b.pubDateISO).getTime() - new Date(a.pubDateISO).getTime()
+        );
+
+        if (entries.length === 0) {
+          status.textContent = "No entries yet. Waiting for first fetch...";
+          return;
+        }
+
+        const fmt = new Intl.DateTimeFormat("en-CA", {
+          weekday: "short",
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+          hour: "numeric",
+          minute: "2-digit",
+          timeZoneName: "short",
+        });
+
+        status.textContent = `${entries.length} entries archived. Last updated: ${
+          data.lastFetchedAt ? fmt.format(new Date(data.lastFetchedAt)) : "never"
+        }`;
+
+        for (const entry of entries) {
+          const el = document.createElement("article");
+          el.className = "entry";
+
+          const time = fmt.format(new Date(entry.pubDateISO));
+          const duration = entry.duration || "unknown";
+
+          el.innerHTML = `
+            <div class="entry-time">${time}</div>
+            <div class="entry-desc">${escapeHtml(entry.description)}</div>
+            <div class="entry-meta">
+              <span>Duration: ${escapeHtml(duration)}</span>
+              <span>GUID: ${escapeHtml(entry.guid.slice(0, 20))}...</span>
+            </div>
+            ${entry.audioUrl ? `
+              <audio controls preload="none" src="${escapeAttr(entry.audioUrl)}"></audio>
+              <a class="download-link" href="${escapeAttr(entry.audioUrl)}" target="_blank">Direct audio link</a>
+            ` : ""}
+          `;
+          container.appendChild(el);
+        }
+      } catch (err) {
+        status.textContent = "";
+        container.innerHTML = `<p class="error">Failed to load entries: ${err.message}</p>`;
+      }
+    }
+
+    function escapeHtml(str) {
+      const div = document.createElement("div");
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    function escapeAttr(str) {
+      return str.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/'/g, "&#39;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+
+    load();
+  </script>
+</body>
+</html>
