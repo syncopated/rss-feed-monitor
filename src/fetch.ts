@@ -23,6 +23,7 @@ interface Entry {
   audioLength: number;
   audioType: string;
   fetchedAt: string;
+  seenAt: string[];
 }
 
 interface ArchiveData {
@@ -92,45 +93,46 @@ async function main() {
 
   // Load existing data
   const data: ArchiveData = JSON.parse(fs.readFileSync(DATA_FILE, "utf-8"));
-  const existingGuids = new Set(data.entries.map((e) => e.guid));
+  const existing = data.entries.find((e) => e.guid === guid);
 
-  if (existingGuids.has(guid)) {
-    console.log(`Duplicate guid, skipping: ${guid}`);
-    process.exit(0);
+  if (existing) {
+    // Record that we saw this entry again
+    if (!existing.seenAt) existing.seenAt = [existing.fetchedAt];
+    existing.seenAt.push(now.toISOString());
+    console.log(`Seen again: ${guid} (${existing.seenAt.length} times)`);
+  } else {
+    // Build new entry
+    const pubDate = item.pubDate ?? "";
+    let pubDateISO: string;
+    try {
+      pubDateISO = new Date(pubDate).toISOString();
+    } catch {
+      pubDateISO = now.toISOString();
+    }
+
+    const entry: Entry = {
+      guid,
+      title: item.title ?? "",
+      description: item.description ?? "",
+      summary: item["itunes:summary"] ?? "",
+      pubDate,
+      pubDateISO,
+      duration: item["itunes:duration"] ?? "",
+      audioUrl: item.enclosure?.["@_url"] ?? "",
+      audioLength: parseInt(item.enclosure?.["@_length"] ?? "0", 10),
+      audioType: item.enclosure?.["@_type"] ?? "",
+      fetchedAt: now.toISOString(),
+      seenAt: [now.toISOString()],
+    };
+
+    data.entries.push(entry);
+    console.log(`New entry archived: ${guid} (${pubDate})`);
   }
-
-  // Build new entry
-  const pubDate = item.pubDate ?? "";
-  let pubDateISO: string;
-  try {
-    pubDateISO = new Date(pubDate).toISOString();
-  } catch {
-    pubDateISO = now.toISOString();
-  }
-
-  const entry: Entry = {
-    guid,
-    title: item.title ?? "",
-    description: item.description ?? "",
-    summary: item["itunes:summary"] ?? "",
-    pubDate,
-    pubDateISO,
-    duration: item["itunes:duration"] ?? "",
-    audioUrl: item.enclosure?.["@_url"] ?? "",
-    audioLength: parseInt(item.enclosure?.["@_length"] ?? "0", 10),
-    audioType: item.enclosure?.["@_type"] ?? "",
-    fetchedAt: now.toISOString(),
-  };
-
-  // Append and save
-  data.entries.push(entry);
   data.lastFetchedAt = now.toISOString();
 
   const json = JSON.stringify(data, null, 2) + "\n";
   fs.writeFileSync(DATA_FILE, json);
   fs.writeFileSync(DOCS_FILE, json);
-
-  console.log(`New entry archived: ${guid} (${pubDate})`);
 }
 
 main();

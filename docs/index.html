@@ -111,6 +111,12 @@
           timeZoneName: "short",
         });
 
+        const timeFmt = new Intl.DateTimeFormat("en-CA", {
+          hour: "numeric",
+          minute: "2-digit",
+          timeZoneName: "short",
+        });
+
         status.textContent = `${entries.length} entries archived. Last updated: ${
           data.lastFetchedAt ? fmt.format(new Date(data.lastFetchedAt)) : "never"
         }`;
@@ -121,13 +127,20 @@
 
           const time = fmt.format(new Date(entry.pubDateISO));
           const duration = entry.duration || "unknown";
+          const seenAt = entry.seenAt || [entry.fetchedAt];
+          const seenCount = seenAt.length;
+          const firstSeen = timeFmt.format(new Date(seenAt[0]));
+          const lastSeen = timeFmt.format(new Date(seenAt[seenAt.length - 1]));
+          const seenText = seenCount === 1
+            ? `Seen once at ${firstSeen}`
+            : `Seen ${seenCount} times, ${firstSeen} \u2013 ${lastSeen}`;
 
           el.innerHTML = `
             <div class="entry-time">${time}</div>
             <div class="entry-desc">${escapeHtml(entry.description)}</div>
             <div class="entry-meta">
               <span>Duration: ${escapeHtml(duration)}</span>
-              <span>GUID: ${escapeHtml(entry.guid.slice(0, 20))}...</span>
+              <span>${seenText}</span>
             </div>
             ${entry.audioUrl ? `
               <audio controls preload="none" src="${escapeAttr(entry.audioUrl)}"></audio>
