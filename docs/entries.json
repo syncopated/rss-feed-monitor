@@ -1,7 +1,7 @@
 {
   "feedTitle": "The World This Hour",
   "feedLink": "https://www.cbc.ca/radio/podcasts",
-  "lastFetchedAt": "2026-04-11T17:40:40.333Z",
+  "lastFetchedAt": "2026-04-11T18:00:28.060Z",
   "entries": [
     {
       "guid": "hourlynews-54553659-351a-426f-9a8e-449d2f12c46d",
@@ -27,7 +27,11 @@
       "audioUrl": "https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-FofdLSdq-20260411.mp3",
       "audioLength": 4658342,
       "audioType": "audio/mpeg",
-      "fetchedAt": "2026-04-11T17:40:40.333Z"
+      "fetchedAt": "2026-04-11T17:40:40.333Z",
+      "seenAt": [
+        "2026-04-11T17:40:40.333Z",
+        "2026-04-11T18:00:28.060Z"
+      ]
     }
   ]
 }
