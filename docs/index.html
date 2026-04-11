@@ -72,6 +72,34 @@
     }
     .download-link:hover { text-decoration: underline; }
     .error { color: var(--accent); padding: 2rem 0; }
+    .test-btn {
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.3rem 0.7rem;
+      border: none;
+      border-radius: 6px;
+      background: var(--accent);
+      color: #fff;
+      cursor: pointer;
+      margin-left: 0.5rem;
+      transition: opacity 0.15s, transform 0.1s;
+      vertical-align: middle;
+    }
+    .test-btn:hover { opacity: 0.85; transform: scale(1.03); }
+    .test-btn:active { transform: scale(0.97); }
+    .test-btn.testing { opacity: 0.6; cursor: wait; }
+    .test-result {
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+    }
+    .test-result.success { color: #16a34a; background: #f0fdf4; }
+    .test-result.fail { color: #dc2626; background: #fef2f2; }
+    @media (prefers-color-scheme: dark) {
+      .test-result.success { color: #4ade80; background: #14532d33; }
+      .test-result.fail { color: #f87171; background: #7f1d1d33; }
+    }
   </style>
 </head>
 <body>
@@ -144,7 +172,11 @@
             </div>
             ${entry.audioUrl ? `
               <audio controls preload="none" src="${escapeAttr(entry.audioUrl)}"></audio>
-              <a class="download-link" href="${escapeAttr(entry.audioUrl)}" target="_blank">Direct audio link</a>
+              <div>
+                <a class="download-link" href="${escapeAttr(entry.audioUrl)}" target="_blank">Direct audio link</a>
+                <button class="test-btn" data-url="${escapeAttr(entry.audioUrl)}">Test &#9889;</button>
+              </div>
+              <div class="test-result-container"></div>
             ` : ""}
           `;
           container.appendChild(el);
@@ -164,6 +196,48 @@
     function escapeAttr(str) {
       return str.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/'/g, "&#39;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     }
+
+    async function testAudioUrl(btn) {
+      const url = btn.dataset.url;
+      const container = btn.closest("div").nextElementSibling;
+      btn.classList.add("testing");
+      container.innerHTML = `<div class="test-result" style="color: var(--muted)">\u23F3 Testing...</div>`;
+
+      const start = performance.now();
+      try {
+        // Use HEAD first to avoid downloading the whole file
+        const res = await fetch(url, { method: "HEAD", mode: "no-cors" });
+        // no-cors means we can't read status, so try an opaque range request
+        const rangeRes = await fetch(url, {
+          headers: { "Range": "bytes=0-1023" },
+        });
+        const elapsed = Math.round(performance.now() - start);
+
+        if (rangeRes.ok || rangeRes.status === 206) {
+          const contentType = rangeRes.headers.get("content-type") || "unknown";
+          const contentLength = rangeRes.headers.get("content-range") || rangeRes.headers.get("content-length") || "unknown";
+          container.innerHTML = `<div class="test-result success">
+            \u2705 OK (${rangeRes.status}) in ${elapsed}ms &mdash; type: ${escapeHtml(contentType)}, size: ${escapeHtml(contentLength)}
+          </div>`;
+        } else {
+          container.innerHTML = `<div class="test-result fail">
+            \u274C HTTP ${rangeRes.status} ${escapeHtml(rangeRes.statusText)} (${elapsed}ms)
+          </div>`;
+        }
+      } catch (err) {
+        const elapsed = Math.round(performance.now() - start);
+        container.innerHTML = `<div class="test-result fail">
+          \u274C Failed (${elapsed}ms): ${escapeHtml(err.message)}
+        </div>`;
+      }
+      btn.classList.remove("testing");
+    }
+
+    document.addEventListener("click", (e) => {
+      if (e.target.classList.contains("test-btn")) {
+        testAudioUrl(e.target);
+      }
+    });
 
     load();
   </script>
