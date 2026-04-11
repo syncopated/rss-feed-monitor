@@ -4,7 +4,8 @@
   "description": "Monitor and archive CBC The World This Hour RSS feed",
   "type": "module",
   "scripts": {
-    "fetch": "tsx src/fetch.ts"
+    "fetch": "tsx src/fetch.ts",
+    "dev": "npx serve docs -l 3000"
   },
   "dependencies": {
     "fast-xml-parser": "^5.5.11"

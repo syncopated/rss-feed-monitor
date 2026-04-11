@@ -87,7 +87,8 @@
       const container = document.getElementById("entries");
 
       try {
-        const res = await fetch("entries.json");
+        const base = new URL(".", window.location.href).href;
+        const res = await fetch(new URL("entries.json", base));
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
 
