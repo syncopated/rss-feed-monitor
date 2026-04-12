@@ -8,7 +8,7 @@ const DATA_FILE = path.resolve(__dirname, "../data/entries.json");
 const FEED_FILE = path.resolve(__dirname, "../docs/feed.xml");
 const FEED_URL =
   "https://syncopated.github.io/rss-feed-monitor/feed.xml";
-const MAX_EPISODES = 24;
+const MAX_EPISODES = 3;
 
 interface Entry {
   guid: string;
