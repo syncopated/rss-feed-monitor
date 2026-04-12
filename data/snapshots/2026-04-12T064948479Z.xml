@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <language>en-ca</language>
+        <title>The World This Hour</title>
+        <link>https://www.cbc.ca/radio/podcasts</link>
+        <description><![CDATA[<p>Catch up on the day's most important news from Canada and around the world in 5 minutes. Updated every hour, 24/7.</p>]]></description>
+        <itunes:summary><![CDATA[<p>Catch up on the day's most important news from Canada and around the world in 5 minutes. Updated every hour, 24/7.</p>]]></itunes:summary>
+        <itunes:owner>
+            <itunes:name>CBC</itunes:name>
+            <itunes:email>podcasting@cbc.ca</itunes:email>
+        </itunes:owner>
+        <copyright>Copyright © CBC 2026</copyright>
+        <itunes:category text="News" />
+        <itunes:author>CBC</itunes:author>
+        <itunes:image href="https://www.cbc.ca/radio/podcasts/images/theworldthishour-3000x3000.jpg"/>
+        <itunes:explicit>No</itunes:explicit>
+        <image>
+            <title>The World This Hour</title>
+            <url>https://www.cbc.ca/radio/podcasts/images/theworldthishour-3000x3000.jpg</url>
+            <link>https://www.cbc.ca/radio/podcasts</link>
+        </image>
+        <atom:link href="https://www.cbc.ca/podcasting/includes/hourlynews.xml" rel="self" type="application/rss+xml" />
+                <item>
+                    <guid isPermaLink="false">hourlynews-3a4f6d3e-aecc-453d-b03b-239243512278</guid>
+                    <title>The latest news in 5 minutes</title>
+                    <description>Updated: 2026/04/12 at 02:00 EDT</description>
+                    <itunes:subtitle>The World This Hour</itunes:subtitle>
+                    <itunes:summary>The World This Hour for 2026/04/12 at 02:00 EDT</itunes:summary>
+                    <pubDate>Sun, 12 Apr 2026 02:00:00 EDT</pubDate>
+                    <itunes:duration>00:04:30</itunes:duration>
+                    <itunes:explicit>No</itunes:explicit>
+                    <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-lWjoMG73-20260412.mp3" length="4658342" type="audio/mpeg" />
+                </item>
+    </channel>
+</rss>
