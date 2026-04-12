@@ -22,6 +22,16 @@
         </image>
         <atom:link href="https://syncopated.github.io/rss-feed-monitor/feed.xml" rel="self" type="application/rss+xml" />
         <item>
+            <guid isPermaLink="false">hourlynews-61805b5b-85f7-4b8a-9db4-4fd26dee69d7</guid>
+            <title>The World This Hour — Sunday, April 12 at 12:00 PM EDT</title>
+            <description>Updated: 2026/04/12 at 12:00 EDT</description>
+            <itunes:summary>The World This Hour for 2026/04/12 at 12:00 EDT</itunes:summary>
+            <pubDate>Sun, 12 Apr 2026 12:00:00 EDT</pubDate>
+            <itunes:duration>00:04:30</itunes:duration>
+            <itunes:explicit>No</itunes:explicit>
+            <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-Wodlo9Hr-20260412.mp3" length="4658342" type="audio/mpeg" />
+        </item>
+        <item>
             <guid isPermaLink="false">hourlynews-6808dfac-b009-448b-b1a5-254e7a5f212f</guid>
             <title>The World This Hour — Sunday, April 12 at 11:00 AM EDT</title>
             <description>Updated: 2026/04/12 at 11:00 EDT</description>
