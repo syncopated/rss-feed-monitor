@@ -69,8 +69,8 @@ function main() {
       (entry) => `        <item>
             <guid isPermaLink="false">${esc(entry.guid)}</guid>
             <title>${esc(episodeTitle(entry.pubDateISO))}</title>
-            <description>${esc(entry.description)}</description>
-            <itunes:summary>${esc(entry.summary)}</itunes:summary>
+            <description>Catch up on the day's most important news from Canada and around the world in 5 minutes. Updated every hour, 24/7.</description>
+            <itunes:summary>Catch up on the day's most important news from Canada and around the world in 5 minutes. Updated every hour, 24/7.</itunes:summary>
             <pubDate>${esc(entry.pubDate)}</pubDate>
             <itunes:duration>${esc(entry.duration)}</itunes:duration>
             <itunes:explicit>No</itunes:explicit>
