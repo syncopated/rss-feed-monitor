@@ -32,25 +32,26 @@ function esc(str: string): string {
     .replace(/"/g, "&quot;");
 }
 
-const dayFmt = new Intl.DateTimeFormat("en-US", {
-  weekday: "long",
-  month: "long",
-  day: "numeric",
-  timeZone: "America/Toronto",
-});
-
 const timeFmt = new Intl.DateTimeFormat("en-US", {
   hour: "numeric",
-  minute: "2-digit",
   hour12: true,
   timeZone: "America/Toronto",
   timeZoneName: "short",
 });
 
+const dateFmt = new Intl.DateTimeFormat("en-US", {
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+  timeZone: "America/Toronto",
+});
+
 function episodeTitle(pubDateISO: string): string {
   const date = new Date(pubDateISO);
-  // e.g. "The World This Hour — Sunday, April 12 at 11:00 AM EDT"
-  return `The World This Hour — ${dayFmt.format(date)} at ${timeFmt.format(date)}`;
+  // Remove space between number and AM/PM: "12 PM" → "12PM"
+  const time = timeFmt.format(date).replace(/(\d)\s+(AM|PM)/, "$1$2");
+  // e.g. "The World This Hour: 12PM EDT April 12, 2026"
+  return `The World This Hour: ${time} ${dateFmt.format(date)}`;
 }
 
 function main() {
