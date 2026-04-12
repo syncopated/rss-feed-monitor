@@ -2,7 +2,7 @@ name: Fetch CBC Hourly News
 
 on:
   schedule:
-    - cron: '15,45 * * * *'
+    - cron: '*/15 * * * *'
   workflow_dispatch: {}
 
 permissions:
@@ -27,11 +27,14 @@ jobs:
       - name: Fetch feed
         run: npm run fetch
 
+      - name: Generate feed
+        run: npm run generate-feed
+
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/ docs/entries.json
+          git add data/ docs/
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else

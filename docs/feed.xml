@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <language>en-ca</language>
+        <title>The World This Hour</title>
+        <link>https://www.cbc.ca/radio/podcasts</link>
+        <description>Catch up on the day's most important news from Canada and around the world in 5 minutes. Updated every hour, 24/7. Last 24 episodes.</description>
+        <itunes:summary>Catch up on the day's most important news from Canada and around the world in 5 minutes. Updated every hour, 24/7.</itunes:summary>
+        <itunes:owner>
+            <itunes:name>CBC</itunes:name>
+            <itunes:email>podcasting@cbc.ca</itunes:email>
+        </itunes:owner>
+        <copyright>Copyright © CBC 2026</copyright>
+        <itunes:category text="News" />
+        <itunes:author>CBC</itunes:author>
+        <itunes:image href="https://www.cbc.ca/radio/podcasts/images/theworldthishour-3000x3000.jpg"/>
+        <itunes:explicit>No</itunes:explicit>
+        <image>
+            <title>The World This Hour</title>
+            <url>https://www.cbc.ca/radio/podcasts/images/theworldthishour-3000x3000.jpg</url>
+            <link>https://www.cbc.ca/radio/podcasts</link>
+        </image>
+        <atom:link href="https://syncopated.github.io/rss-feed-monitor/feed.xml" rel="self" type="application/rss+xml" />
+        <item>
+            <guid isPermaLink="false">hourlynews-6808dfac-b009-448b-b1a5-254e7a5f212f</guid>
+            <title>The World This Hour — Sunday, April 12 at 11:00 AM EDT</title>
+            <description>Updated: 2026/04/12 at 11:00 EDT</description>
+            <itunes:summary>The World This Hour for 2026/04/12 at 11:00 EDT</itunes:summary>
+            <pubDate>Sun, 12 Apr 2026 11:00:00 EDT</pubDate>
+            <itunes:duration>00:04:30</itunes:duration>
+            <itunes:explicit>No</itunes:explicit>
+            <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-abV7iWny-20260412.mp3" length="4658342" type="audio/mpeg" />
+        </item>
+        <item>
+            <guid isPermaLink="false">hourlynews-f7be0d82-e5ba-45e8-8c71-6bc6d3a365d5</guid>
+            <title>The World This Hour — Sunday, April 12 at 10:00 AM EDT</title>
+            <description>Updated: 2026/04/12 at 10:00 EDT</description>
+            <itunes:summary>The World This Hour for 2026/04/12 at 10:00 EDT</itunes:summary>
+            <pubDate>Sun, 12 Apr 2026 10:00:00 EDT</pubDate>
+            <itunes:duration>00:04:30</itunes:duration>
+            <itunes:explicit>No</itunes:explicit>
+            <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-zS0AxuEh-20260412.mp3" length="4658342" type="audio/mpeg" />
+        </item>
+        <item>
+            <guid isPermaLink="false">hourlynews-5000818a-4b90-44d9-9296-56b94e2310f5</guid>
+            <title>The World This Hour — Sunday, April 12 at 9:00 AM EDT</title>
+            <description>Updated: 2026/04/12 at 09:00 EDT</description>
+            <itunes:summary>The World This Hour for 2026/04/12 at 09:00 EDT</itunes:summary>
+            <pubDate>Sun, 12 Apr 2026 09:00:00 EDT</pubDate>
+            <itunes:duration>00:04:30</itunes:duration>
+            <itunes:explicit>No</itunes:explicit>
+            <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-nQtrrTUn-20260412.mp3" length="4658342" type="audio/mpeg" />
+        </item>
+        <item>
+            <guid isPermaLink="false">hourlynews-484d3995-c26e-48a2-a201-a7d5790b3a00</guid>
+            <title>The World This Hour — Sunday, April 12 at 7:00 AM EDT</title>
+            <description>Updated: 2026/04/12 at 07:00 EDT</description>
+            <itunes:summary>The World This Hour for 2026/04/12 at 07:00 EDT</itunes:summary>
+            <pubDate>Sun, 12 Apr 2026 07:00:00 EDT</pubDate>
+            <itunes:duration>00:04:30</itunes:duration>
+            <itunes:explicit>No</itunes:explicit>
+            <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-4O0VUO9g-20260412.mp3" length="4658342" type="audio/mpeg" />
+        </item>
+        <item>
+            <guid isPermaLink="false">hourlynews-c1323339-acc6-453f-8193-7c49ef4e1181</guid>
+            <title>The World This Hour — Sunday, April 12 at 6:00 AM EDT</title>
+            <description>Updated: 2026/04/12 at 06:00 EDT</description>
+            <itunes:summary>The World This Hour for 2026/04/12 at 06:00 EDT</itunes:summary>
+            <pubDate>Sun, 12 Apr 2026 06:00:00 EDT</pubDate>
+            <itunes:duration>00:04:30</itunes:duration>
+            <itunes:explicit>No</itunes:explicit>
+            <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-SSxemXI8-20260412.mp3" length="4658342" type="audio/mpeg" />
+        </item>
+        <item>
+            <guid isPermaLink="false">hourlynews-79143924-5d2a-4510-be35-09da610c2853</guid>
+            <title>The World This Hour — Sunday, April 12 at 5:00 AM EDT</title>
+            <description>Updated: 2026/04/12 at 05:00 EDT</description>
+            <itunes:summary>The World This Hour for 2026/04/12 at 05:00 EDT</itunes:summary>
+            <pubDate>Sun, 12 Apr 2026 05:00:00 EDT</pubDate>
+            <itunes:duration>00:04:30</itunes:duration>
+            <itunes:explicit>No</itunes:explicit>
+            <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-8Ovj2naS-20260412.mp3" length="4658342" type="audio/mpeg" />
+        </item>
+        <item>
+            <guid isPermaLink="false">hourlynews-9e86b9fd-c7de-4276-a688-96b548031c39</guid>
+            <title>The World This Hour — Sunday, April 12 at 4:00 AM EDT</title>
+            <description>Updated: 2026/04/12 at 04:00 EDT</description>
+            <itunes:summary>The World This Hour for 2026/04/12 at 04:00 EDT</itunes:summary>
+            <pubDate>Sun, 12 Apr 2026 04:00:00 EDT</pubDate>
+            <itunes:duration>00:04:30</itunes:duration>
+            <itunes:explicit>No</itunes:explicit>
+            <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-Yq2cJBsL-20260412.mp3" length="4658342" type="audio/mpeg" />
+        </item>
+        <item>
+            <guid isPermaLink="false">hourlynews-59e93531-ff10-4f85-a924-db3b09d1a07e</guid>
+            <title>The World This Hour — Sunday, April 12 at 3:00 AM EDT</title>
+            <description>Updated: 2026/04/12 at 03:00 EDT</description>
+            <itunes:summary>The World This Hour for 2026/04/12 at 03:00 EDT</itunes:summary>
+            <pubDate>Sun, 12 Apr 2026 03:00:00 EDT</pubDate>
+            <itunes:duration>00:04:30</itunes:duration>
+            <itunes:explicit>No</itunes:explicit>
+            <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-M5heKXCB-20260412.mp3" length="4658342" type="audio/mpeg" />
+        </item>
+        <item>
+            <guid isPermaLink="false">hourlynews-3a4f6d3e-aecc-453d-b03b-239243512278</guid>
+            <title>The World This Hour — Sunday, April 12 at 2:00 AM EDT</title>
+            <description>Updated: 2026/04/12 at 02:00 EDT</description>
+            <itunes:summary>The World This Hour for 2026/04/12 at 02:00 EDT</itunes:summary>
+            <pubDate>Sun, 12 Apr 2026 02:00:00 EDT</pubDate>
+            <itunes:duration>00:04:30</itunes:duration>
+            <itunes:explicit>No</itunes:explicit>
+            <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-lWjoMG73-20260412.mp3" length="4658342" type="audio/mpeg" />
+        </item>
+        <item>
+            <guid isPermaLink="false">hourlynews-ff79b197-b498-4620-a0e9-99c366384282</guid>
+            <title>The World This Hour — Sunday, April 12 at 12:00 AM EDT</title>
+            <description>Updated: 2026/04/12 at 00:00 EDT</description>
+            <itunes:summary>The World This Hour for 2026/04/12 at 00:00 EDT</itunes:summary>
+            <pubDate>Sun, 12 Apr 2026 00:00:00 EDT</pubDate>
+            <itunes:duration>00:04:30</itunes:duration>
+            <itunes:explicit>No</itunes:explicit>
+            <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-TIULZ3z2-20260412.mp3" length="4658342" type="audio/mpeg" />
+        </item>
+        <item>
+            <guid isPermaLink="false">hourlynews-bc0c1f7c-3298-498a-81a9-a07a23298fa4</guid>
+            <title>The World This Hour — Saturday, April 11 at 11:00 PM EDT</title>
+            <description>Updated: 2026/04/11 at 23:00 EDT</description>
+            <itunes:summary>The World This Hour for 2026/04/11 at 23:00 EDT</itunes:summary>
+            <pubDate>Sat, 11 Apr 2026 23:00:00 EDT</pubDate>
+            <itunes:duration>00:04:30</itunes:duration>
+            <itunes:explicit>No</itunes:explicit>
+            <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-rhXj5HSN-20260411.mp3" length="4658342" type="audio/mpeg" />
+        </item>
+        <item>
+            <guid isPermaLink="false">hourlynews-657e41ef-4188-4400-8c47-4faaf1df5ecf</guid>
+            <title>The World This Hour — Saturday, April 11 at 7:00 PM EDT</title>
+            <description>Updated: 2026/04/11 at 19:00 EDT</description>
+            <itunes:summary>The World This Hour for 2026/04/11 at 19:00 EDT</itunes:summary>
+            <pubDate>Sat, 11 Apr 2026 19:00:00 EDT</pubDate>
+            <itunes:duration>00:04:30</itunes:duration>
+            <itunes:explicit>No</itunes:explicit>
+            <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-C8y1rpXb-20260411.mp3" length="4658342" type="audio/mpeg" />
+        </item>
+        <item>
+            <guid isPermaLink="false">hourlynews-43418ec0-183c-42dc-8115-9d13181f18da</guid>
+            <title>The World This Hour — Saturday, April 11 at 6:00 PM EDT</title>
+            <description>Updated: 2026/04/11 at 18:00 EDT</description>
+            <itunes:summary>The World This Hour for 2026/04/11 at 18:00 EDT</itunes:summary>
+            <pubDate>Sat, 11 Apr 2026 18:00:00 EDT</pubDate>
+            <itunes:duration>00:04:30</itunes:duration>
+            <itunes:explicit>No</itunes:explicit>
+            <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-42x5l8Kk-20260411.mp3" length="4658342" type="audio/mpeg" />
+        </item>
+        <item>
+            <guid isPermaLink="false">hourlynews-72eb2529-e344-41f0-b11d-e2f2ac87d11d</guid>
+            <title>The World This Hour — Saturday, April 11 at 5:00 PM EDT</title>
+            <description>Updated: 2026/04/11 at 17:00 EDT</description>
+            <itunes:summary>The World This Hour for 2026/04/11 at 17:00 EDT</itunes:summary>
+            <pubDate>Sat, 11 Apr 2026 17:00:00 EDT</pubDate>
+            <itunes:duration>00:04:30</itunes:duration>
+            <itunes:explicit>No</itunes:explicit>
+            <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-dyDNdOH8-20260411.mp3" length="4658342" type="audio/mpeg" />
+        </item>
+        <item>
+            <guid isPermaLink="false">hourlynews-29bc88e1-7e57-4dc0-8747-e84406c8d776</guid>
+            <title>The World This Hour — Saturday, April 11 at 4:00 PM EDT</title>
+            <description>Updated: 2026/04/11 at 16:00 EDT</description>
+            <itunes:summary>The World This Hour for 2026/04/11 at 16:00 EDT</itunes:summary>
+            <pubDate>Sat, 11 Apr 2026 16:00:00 EDT</pubDate>
+            <itunes:duration>00:04:30</itunes:duration>
+            <itunes:explicit>No</itunes:explicit>
+            <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-hK8DPVcG-20260411.mp3" length="4658342" type="audio/mpeg" />
+        </item>
+        <item>
+            <guid isPermaLink="false">hourlynews-2a4578b0-eeef-48e9-b270-2edc4ee2d39a</guid>
+            <title>The World This Hour — Saturday, April 11 at 3:00 PM EDT</title>
+            <description>Updated: 2026/04/11 at 15:00 EDT</description>
+            <itunes:summary>The World This Hour for 2026/04/11 at 15:00 EDT</itunes:summary>
+            <pubDate>Sat, 11 Apr 2026 15:00:00 EDT</pubDate>
+            <itunes:duration>00:04:30</itunes:duration>
+            <itunes:explicit>No</itunes:explicit>
+            <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-IJsprJIA-20260411.mp3" length="4658342" type="audio/mpeg" />
+        </item>
+        <item>
+            <guid isPermaLink="false">hourlynews-f138a3e0-5e2b-47aa-9d01-707ec84e41dc</guid>
+            <title>The World This Hour — Saturday, April 11 at 1:00 PM EDT</title>
+            <description>Updated: 2026/04/11 at 13:00 EDT</description>
+            <itunes:summary>The World This Hour for 2026/04/11 at 13:00 EDT</itunes:summary>
+            <pubDate>Sat, 11 Apr 2026 13:00:00 EDT</pubDate>
+            <itunes:duration>00:04:30</itunes:duration>
+            <itunes:explicit>No</itunes:explicit>
+            <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-FofdLSdq-20260411.mp3" length="4658342" type="audio/mpeg" />
+        </item>
+        <item>
+            <guid isPermaLink="false">hourlynews-54553659-351a-426f-9a8e-449d2f12c46d</guid>
+            <title>The World This Hour — Saturday, April 11 at 12:00 PM EDT</title>
+            <description>Updated: 2026/04/11 at 12:00 EDT</description>
+            <itunes:summary>The World This Hour for 2026/04/11 at 12:00 EDT</itunes:summary>
+            <pubDate>Sat, 11 Apr 2026 12:00:00 EDT</pubDate>
+            <itunes:duration>00:04:30</itunes:duration>
+            <itunes:explicit>No</itunes:explicit>
+            <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-BGX7RoUA-20260411.mp3" length="4658342" type="audio/mpeg" />
+        </item>
+    </channel>
+</rss>
