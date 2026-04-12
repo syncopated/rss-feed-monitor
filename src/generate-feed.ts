@@ -32,6 +32,27 @@ function esc(str: string): string {
     .replace(/"/g, "&quot;");
 }
 
+const dayFmt = new Intl.DateTimeFormat("en-US", {
+  weekday: "long",
+  month: "long",
+  day: "numeric",
+  timeZone: "America/Toronto",
+});
+
+const timeFmt = new Intl.DateTimeFormat("en-US", {
+  hour: "numeric",
+  minute: "2-digit",
+  hour12: true,
+  timeZone: "America/Toronto",
+  timeZoneName: "short",
+});
+
+function episodeTitle(pubDateISO: string): string {
+  const date = new Date(pubDateISO);
+  // e.g. "The World This Hour — Sunday, April 12 at 11:00 AM EDT"
+  return `The World This Hour — ${dayFmt.format(date)} at ${timeFmt.format(date)}`;
+}
+
 function main() {
   const data = JSON.parse(fs.readFileSync(DATA_FILE, "utf-8"));
 
@@ -47,7 +68,7 @@ function main() {
     .map(
       (entry) => `        <item>
             <guid isPermaLink="false">${esc(entry.guid)}</guid>
-            <title>${esc(entry.summary || entry.title)}</title>
+            <title>${esc(episodeTitle(entry.pubDateISO))}</title>
             <description>${esc(entry.description)}</description>
             <itunes:summary>${esc(entry.summary)}</itunes:summary>
             <pubDate>${esc(entry.pubDate)}</pubDate>
