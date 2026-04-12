@@ -1,7 +1,7 @@
 {
   "feedTitle": "The World This Hour",
   "feedLink": "https://www.cbc.ca/radio/podcasts",
-  "lastFetchedAt": "2026-04-12T22:55:56.040Z",
+  "lastFetchedAt": "2026-04-12T23:52:11.442Z",
   "entries": [
     {
       "guid": "hourlynews-54553659-351a-426f-9a8e-449d2f12c46d",
@@ -401,6 +401,22 @@
       "fetchedAt": "2026-04-12T22:55:56.040Z",
       "seenAt": [
         "2026-04-12T22:55:56.040Z"
+      ]
+    },
+    {
+      "guid": "hourlynews-096e62ca-61c6-4531-a927-76b56b76ff0f",
+      "title": "The latest news in 5 minutes",
+      "description": "Updated: 2026/04/12 at 19:00 EDT",
+      "summary": "The World This Hour for 2026/04/12 at 19:00 EDT",
+      "pubDate": "Sun, 12 Apr 2026 19:00:00 EDT",
+      "pubDateISO": "2026-04-12T23:00:00.000Z",
+      "duration": "00:04:30",
+      "audioUrl": "https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-RNuUGzuq-20260412.mp3",
+      "audioLength": 4658342,
+      "audioType": "audio/mpeg",
+      "fetchedAt": "2026-04-12T23:52:11.442Z",
+      "seenAt": [
+        "2026-04-12T23:52:11.442Z"
       ]
     }
   ]
