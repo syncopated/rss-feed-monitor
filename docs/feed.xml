@@ -22,6 +22,16 @@
         </image>
         <atom:link href="https://syncopated.github.io/rss-feed-monitor/feed.xml" rel="self" type="application/rss+xml" />
         <item>
+            <guid isPermaLink="false">hourlynews-6ced7ed5-d35e-4239-8e87-cc2034a2f4d9</guid>
+            <title>The World This Hour: 3PM EDT April 12, 2026</title>
+            <description>Catch up on the day's most important news from Canada and around the world in 5 minutes. Updated every hour, 24/7.</description>
+            <itunes:summary>Catch up on the day's most important news from Canada and around the world in 5 minutes. Updated every hour, 24/7.</itunes:summary>
+            <pubDate>Sun, 12 Apr 2026 15:00:00 EDT</pubDate>
+            <itunes:duration>00:04:30</itunes:duration>
+            <itunes:explicit>No</itunes:explicit>
+            <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-7wyWZGdK-20260412.mp3" length="4658342" type="audio/mpeg" />
+        </item>
+        <item>
             <guid isPermaLink="false">hourlynews-70b8b029-4e1c-4f6f-8add-4e25eaa735aa</guid>
             <title>The World This Hour: 2PM EDT April 12, 2026</title>
             <description>Catch up on the day's most important news from Canada and around the world in 5 minutes. Updated every hour, 24/7.</description>
@@ -40,16 +50,6 @@
             <itunes:duration>00:04:30</itunes:duration>
             <itunes:explicit>No</itunes:explicit>
             <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-BwtJ0cNJ-20260412.mp3" length="4658342" type="audio/mpeg" />
-        </item>
-        <item>
-            <guid isPermaLink="false">hourlynews-61805b5b-85f7-4b8a-9db4-4fd26dee69d7</guid>
-            <title>The World This Hour: 12PM EDT April 12, 2026</title>
-            <description>Catch up on the day's most important news from Canada and around the world in 5 minutes. Updated every hour, 24/7.</description>
-            <itunes:summary>Catch up on the day's most important news from Canada and around the world in 5 minutes. Updated every hour, 24/7.</itunes:summary>
-            <pubDate>Sun, 12 Apr 2026 12:00:00 EDT</pubDate>
-            <itunes:duration>00:04:30</itunes:duration>
-            <itunes:explicit>No</itunes:explicit>
-            <enclosure url="https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-Wodlo9Hr-20260412.mp3" length="4658342" type="audio/mpeg" />
         </item>
     </channel>
 </rss>
