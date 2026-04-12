@@ -9,6 +9,7 @@ const FEED_URL = "https://www.cbc.ca/podcasting/includes/hourlynews.xml";
 const DATA_FILE = path.resolve(__dirname, "../data/entries.json");
 const DOCS_FILE = path.resolve(__dirname, "../docs/entries.json");
 const SNAPSHOT_DIR = path.resolve(__dirname, "../data/snapshots");
+const RUNS_FILE = path.resolve(__dirname, "../data/runs.json");
 const USER_AGENT = "CBC-Hourly-News-Monitor/1.0";
 
 interface Entry {
@@ -26,6 +27,16 @@ interface Entry {
   seenAt: string[];
 }
 
+interface RunRecord {
+  runAt: string;
+  status: "new" | "seen" | "error";
+  guid?: string;
+  title?: string;
+  seenCount?: number;
+  snapshotFile?: string;
+  error?: string;
+}
+
 interface ArchiveData {
   feedTitle: string;
   feedLink: string;
@@ -33,7 +44,23 @@ interface ArchiveData {
   entries: Entry[];
 }
 
+function writeRunLog(record: RunRecord) {
+  let runs: RunRecord[] = [];
+  if (fs.existsSync(RUNS_FILE)) {
+    try {
+      runs = JSON.parse(fs.readFileSync(RUNS_FILE, "utf-8"));
+    } catch {
+      runs = [];
+    }
+  }
+  runs.push(record);
+  fs.writeFileSync(RUNS_FILE, JSON.stringify(runs, null, 2) + "\n");
+}
+
 async function main() {
+  const now = new Date();
+  const run: RunRecord = { runAt: now.toISOString(), status: "error" };
+
   // Fetch the feed
   let xml: string;
   try {
@@ -41,21 +68,28 @@ async function main() {
       headers: { "User-Agent": USER_AGENT },
     });
     if (!response.ok) {
-      console.log(`Feed returned ${response.status} ${response.statusText}`);
+      const msg = `Feed returned ${response.status} ${response.statusText}`;
+      console.log(msg);
+      run.error = msg;
+      writeRunLog(run);
       process.exit(0);
     }
     xml = await response.text();
   } catch (err) {
-    console.log(`Failed to fetch feed: ${err}`);
+    const msg = `Failed to fetch feed: ${err}`;
+    console.log(msg);
+    run.error = msg;
+    writeRunLog(run);
     process.exit(0);
   }
 
   // Save raw XML snapshot
-  const now = new Date();
   const timestamp = now.toISOString().replace(/[:.]/g, "").replace("Z", "Z");
   fs.mkdirSync(SNAPSHOT_DIR, { recursive: true });
-  fs.writeFileSync(path.join(SNAPSHOT_DIR, `${timestamp}.xml`), xml);
-  console.log(`Saved snapshot: ${timestamp}.xml`);
+  const snapshotFile = `${timestamp}.xml`;
+  fs.writeFileSync(path.join(SNAPSHOT_DIR, snapshotFile), xml);
+  console.log(`Saved snapshot: ${snapshotFile}`);
+  run.snapshotFile = snapshotFile;
 
   // Parse XML
   const parser = new XMLParser({
@@ -68,18 +102,27 @@ async function main() {
     const feed = parser.parse(xml);
     const channel = feed?.rss?.channel;
     if (!channel) {
-      console.log("No channel found in feed");
+      const msg = "No channel found in feed";
+      console.log(msg);
+      run.error = msg;
+      writeRunLog(run);
       process.exit(0);
     }
     // Handle single item (object) or multiple items (array)
     const items = Array.isArray(channel.item) ? channel.item : [channel.item];
     item = items[0];
     if (!item) {
-      console.log("No items found in feed");
+      const msg = "No items found in feed";
+      console.log(msg);
+      run.error = msg;
+      writeRunLog(run);
       process.exit(0);
     }
   } catch (err) {
-    console.log(`Failed to parse XML: ${err}`);
+    const msg = `Failed to parse XML: ${err}`;
+    console.log(msg);
+    run.error = msg;
+    writeRunLog(run);
     process.exit(0);
   }
 
@@ -87,7 +130,10 @@ async function main() {
   const guid =
     typeof item.guid === "object" ? item.guid["#text"] : String(item.guid);
   if (!guid) {
-    console.log("No guid found in item");
+    const msg = "No guid found in item";
+    console.log(msg);
+    run.error = msg;
+    writeRunLog(run);
     process.exit(0);
   }
 
@@ -99,6 +145,10 @@ async function main() {
     // Record that we saw this entry again
     if (!existing.seenAt) existing.seenAt = [existing.fetchedAt];
     existing.seenAt.push(now.toISOString());
+    run.status = "seen";
+    run.guid = guid;
+    run.title = existing.title;
+    run.seenCount = existing.seenAt.length;
     console.log(`Seen again: ${guid} (${existing.seenAt.length} times)`);
   } else {
     // Build new entry
@@ -126,6 +176,9 @@ async function main() {
     };
 
     data.entries.push(entry);
+    run.status = "new";
+    run.guid = guid;
+    run.title = entry.title;
     console.log(`New entry archived: ${guid} (${pubDate})`);
   }
   data.lastFetchedAt = now.toISOString();
@@ -133,6 +186,7 @@ async function main() {
   const json = JSON.stringify(data, null, 2) + "\n";
   fs.writeFileSync(DATA_FILE, json);
   fs.writeFileSync(DOCS_FILE, json);
+  writeRunLog(run);
 }
 
 main();
