@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "runAt": "2026-04-12T04:52:42.187Z",
+    "status": "new",
+    "snapshotFile": "2026-04-12T045242187Z.xml",
+    "guid": "hourlynews-ff79b197-b498-4620-a0e9-99c366384282",
+    "title": "The latest news in 5 minutes"
+  }
+]
