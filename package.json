@@ -6,6 +6,7 @@
   "scripts": {
     "fetch": "tsx src/fetch.ts",
     "generate-feed": "tsx src/generate-feed.ts",
+    "watch": "tsx src/watch.ts",
     "dev": "npx serve docs -l 3000"
   },
   "dependencies": {
