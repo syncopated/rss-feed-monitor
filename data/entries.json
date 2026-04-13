@@ -1,7 +1,7 @@
 {
   "feedTitle": "The World This Hour",
   "feedLink": "https://www.cbc.ca/radio/podcasts",
-  "lastFetchedAt": "2026-04-13T21:50:05.390Z",
+  "lastFetchedAt": "2026-04-13T22:04:13.419Z",
   "entries": [
     {
       "guid": "hourlynews-54553659-351a-426f-9a8e-449d2f12c46d",
@@ -771,7 +771,8 @@
         "2026-04-13T21:36:54.407Z",
         "2026-04-13T21:48:03.360Z",
         "2026-04-13T21:49:04.369Z",
-        "2026-04-13T21:50:05.390Z"
+        "2026-04-13T21:50:05.390Z",
+        "2026-04-13T22:04:13.419Z"
       ]
     }
   ]
