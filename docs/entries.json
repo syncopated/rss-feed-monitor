@@ -1,7 +1,7 @@
 {
   "feedTitle": "The World This Hour",
   "feedLink": "https://www.cbc.ca/radio/podcasts",
-  "lastFetchedAt": "2026-04-13T17:32:06.074Z",
+  "lastFetchedAt": "2026-04-13T18:30:53.989Z",
   "entries": [
     {
       "guid": "hourlynews-54553659-351a-426f-9a8e-449d2f12c46d",
@@ -544,7 +544,46 @@
       "audioType": "audio/mpeg",
       "fetchedAt": "2026-04-13T17:32:06.074Z",
       "seenAt": [
-        "2026-04-13T17:32:06.074Z"
+        "2026-04-13T17:32:06.074Z",
+        "2026-04-13T18:04:09.875Z",
+        "2026-04-13T18:05:10.593Z",
+        "2026-04-13T18:06:11.403Z",
+        "2026-04-13T18:07:12.124Z",
+        "2026-04-13T18:08:12.937Z",
+        "2026-04-13T18:09:13.715Z",
+        "2026-04-13T18:10:14.499Z",
+        "2026-04-13T18:11:15.302Z",
+        "2026-04-13T18:12:16.121Z",
+        "2026-04-13T18:13:17.031Z"
+      ]
+    },
+    {
+      "guid": "hourlynews-fb866e5b-d001-49f2-848e-44be266670d6",
+      "title": "The latest news in 5 minutes",
+      "description": "Updated: 2026/04/13 at 14:00 EDT",
+      "summary": "The World This Hour for 2026/04/13 at 14:00 EDT",
+      "pubDate": "Mon, 13 Apr 2026 14:00:00 EDT",
+      "pubDateISO": "2026-04-13T18:00:00.000Z",
+      "duration": "00:04:30",
+      "audioUrl": "https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-lavTwFy3-20260413.mp3",
+      "audioLength": 4658342,
+      "audioType": "audio/mpeg",
+      "fetchedAt": "2026-04-13T18:14:17.853Z",
+      "seenAt": [
+        "2026-04-13T18:14:17.853Z",
+        "2026-04-13T18:15:18.732Z",
+        "2026-04-13T18:16:19.588Z",
+        "2026-04-13T18:17:20.382Z",
+        "2026-04-13T18:18:21.199Z",
+        "2026-04-13T18:22:46.134Z",
+        "2026-04-13T18:23:47.371Z",
+        "2026-04-13T18:24:48.375Z",
+        "2026-04-13T18:25:49.263Z",
+        "2026-04-13T18:26:50.307Z",
+        "2026-04-13T18:27:51.586Z",
+        "2026-04-13T18:28:52.421Z",
+        "2026-04-13T18:29:53.137Z",
+        "2026-04-13T18:30:53.989Z"
       ]
     }
   ]

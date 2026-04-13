@@ -196,5 +196,196 @@
     "snapshotFile": "2026-04-13T173206074Z.xml",
     "guid": "hourlynews-d2a90636-3372-4220-8714-aabfc39b9081",
     "title": "The latest news in 5 minutes"
+  },
+  {
+    "runAt": "2026-04-13T18:04:09.875Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T180409875Z.xml",
+    "guid": "hourlynews-d2a90636-3372-4220-8714-aabfc39b9081",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 2
+  },
+  {
+    "runAt": "2026-04-13T18:05:10.593Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T180510593Z.xml",
+    "guid": "hourlynews-d2a90636-3372-4220-8714-aabfc39b9081",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 3
+  },
+  {
+    "runAt": "2026-04-13T18:06:11.403Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T180611403Z.xml",
+    "guid": "hourlynews-d2a90636-3372-4220-8714-aabfc39b9081",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 4
+  },
+  {
+    "runAt": "2026-04-13T18:07:12.124Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T180712124Z.xml",
+    "guid": "hourlynews-d2a90636-3372-4220-8714-aabfc39b9081",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 5
+  },
+  {
+    "runAt": "2026-04-13T18:08:12.937Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T180812937Z.xml",
+    "guid": "hourlynews-d2a90636-3372-4220-8714-aabfc39b9081",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 6
+  },
+  {
+    "runAt": "2026-04-13T18:09:13.715Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T180913715Z.xml",
+    "guid": "hourlynews-d2a90636-3372-4220-8714-aabfc39b9081",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 7
+  },
+  {
+    "runAt": "2026-04-13T18:10:14.499Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T181014499Z.xml",
+    "guid": "hourlynews-d2a90636-3372-4220-8714-aabfc39b9081",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 8
+  },
+  {
+    "runAt": "2026-04-13T18:11:15.302Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T181115302Z.xml",
+    "guid": "hourlynews-d2a90636-3372-4220-8714-aabfc39b9081",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 9
+  },
+  {
+    "runAt": "2026-04-13T18:12:16.121Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T181216121Z.xml",
+    "guid": "hourlynews-d2a90636-3372-4220-8714-aabfc39b9081",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 10
+  },
+  {
+    "runAt": "2026-04-13T18:13:17.031Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T181317031Z.xml",
+    "guid": "hourlynews-d2a90636-3372-4220-8714-aabfc39b9081",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 11
+  },
+  {
+    "runAt": "2026-04-13T18:14:17.853Z",
+    "status": "new",
+    "snapshotFile": "2026-04-13T181417853Z.xml",
+    "guid": "hourlynews-fb866e5b-d001-49f2-848e-44be266670d6",
+    "title": "The latest news in 5 minutes"
+  },
+  {
+    "runAt": "2026-04-13T18:15:18.732Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T181518732Z.xml",
+    "guid": "hourlynews-fb866e5b-d001-49f2-848e-44be266670d6",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 2
+  },
+  {
+    "runAt": "2026-04-13T18:16:19.588Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T181619588Z.xml",
+    "guid": "hourlynews-fb866e5b-d001-49f2-848e-44be266670d6",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 3
+  },
+  {
+    "runAt": "2026-04-13T18:17:20.382Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T181720382Z.xml",
+    "guid": "hourlynews-fb866e5b-d001-49f2-848e-44be266670d6",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 4
+  },
+  {
+    "runAt": "2026-04-13T18:18:21.199Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T181821199Z.xml",
+    "guid": "hourlynews-fb866e5b-d001-49f2-848e-44be266670d6",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 5
+  },
+  {
+    "runAt": "2026-04-13T18:22:46.134Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T182246134Z.xml",
+    "guid": "hourlynews-fb866e5b-d001-49f2-848e-44be266670d6",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 6
+  },
+  {
+    "runAt": "2026-04-13T18:23:47.371Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T182347371Z.xml",
+    "guid": "hourlynews-fb866e5b-d001-49f2-848e-44be266670d6",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 7
+  },
+  {
+    "runAt": "2026-04-13T18:24:48.375Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T182448375Z.xml",
+    "guid": "hourlynews-fb866e5b-d001-49f2-848e-44be266670d6",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 8
+  },
+  {
+    "runAt": "2026-04-13T18:25:49.263Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T182549263Z.xml",
+    "guid": "hourlynews-fb866e5b-d001-49f2-848e-44be266670d6",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 9
+  },
+  {
+    "runAt": "2026-04-13T18:26:50.307Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T182650307Z.xml",
+    "guid": "hourlynews-fb866e5b-d001-49f2-848e-44be266670d6",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 10
+  },
+  {
+    "runAt": "2026-04-13T18:27:51.586Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T182751586Z.xml",
+    "guid": "hourlynews-fb866e5b-d001-49f2-848e-44be266670d6",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 11
+  },
+  {
+    "runAt": "2026-04-13T18:28:52.421Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T182852421Z.xml",
+    "guid": "hourlynews-fb866e5b-d001-49f2-848e-44be266670d6",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 12
+  },
+  {
+    "runAt": "2026-04-13T18:29:53.137Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T182953137Z.xml",
+    "guid": "hourlynews-fb866e5b-d001-49f2-848e-44be266670d6",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 13
+  },
+  {
+    "runAt": "2026-04-13T18:30:53.989Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T183053989Z.xml",
+    "guid": "hourlynews-fb866e5b-d001-49f2-848e-44be266670d6",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 14
   }
 ]
