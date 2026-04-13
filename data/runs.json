@@ -1233,5 +1233,13 @@
     "guid": "hourlynews-54f51baa-3fe4-4244-9a82-58bccc7d19c6",
     "title": "The latest news in 5 minutes",
     "seenCount": 13
+  },
+  {
+    "runAt": "2026-04-13T21:09:28.514Z",
+    "status": "seen",
+    "snapshotFile": "2026-04-13T210928514Z.xml",
+    "guid": "hourlynews-54f51baa-3fe4-4244-9a82-58bccc7d19c6",
+    "title": "The latest news in 5 minutes",
+    "seenCount": 14
   }
 ]
