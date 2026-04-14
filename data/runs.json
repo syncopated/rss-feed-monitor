@@ -1620,5 +1620,12 @@
     "snapshotFile": "2026-04-14T210855184Z.xml",
     "guid": "hourlynews-9612199d-8dd4-4fb6-9de7-1bc4469fd27e",
     "title": "The latest news in 5 minutes"
+  },
+  {
+    "runAt": "2026-04-14T22:06:47.735Z",
+    "status": "new",
+    "snapshotFile": "2026-04-14T220647735Z.xml",
+    "guid": "hourlynews-3c2341cb-3dd4-450e-ab24-fe0cedab4dd5",
+    "title": "The latest news in 5 minutes"
   }
 ]
