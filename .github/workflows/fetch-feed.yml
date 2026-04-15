@@ -1,8 +1,6 @@
 name: Fetch CBC Hourly News
 
 on:
-  schedule:
-    - cron: '20 * * * *'
   workflow_dispatch: {}
 
 permissions:
